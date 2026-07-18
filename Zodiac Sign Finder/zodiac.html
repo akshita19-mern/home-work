@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Zodiac Sign Finder </title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#8E2DE2,#4A00E0);
+}
+
+.card{
+    width:420px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#6a0dad;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#6a0dad;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#4b0082;
+    transform:scale(1.03);
+}
+
+.result-card{
+    margin-top:25px;
+    padding:20px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#fdfbfb,#ebedee);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    animation:zoom .5s ease;
+}
+
+.result-card h2{
+    color:#6a0dad;
+    margin-bottom:10px;
+}
+
+.result-card p{
+    margin:8px 0;
+    font-size:18px;
+}
+
+@keyframes zoom{
+
+from{
+transform:scale(.5);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>✨ DISCOVER YOUR ZODIAC SIGN ✨</h1>
+
+<input
+type="text"
+id="month"
+placeholder="Enter Birth Month (Example: July)"
+>
+
+<input
+type="number"
+id="day"
+placeholder="Enter Birth Day"
+>
+
+<button onclick="findZodiac()">
+Find Zodiac
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function findZodiac(){
+
+let month=document.getElementById("month").value.toLowerCase().trim();
+let day=Number(document.getElementById("day").value);
+
+let sign="";
+let emoji="";
+let element="";
+let color="";
+let number="";
+let personality="";
+
+if((month=="march" && day>=21)||(month=="april" && day<=19)){
+sign="Aries";
+emoji="♈";
+element="🔥 Fire";
+color="Red";
+number="9";
+personality="Confident, energetic and courageous.";
+}
+
+else if((month=="april" && day>=20)||(month=="may" && day<=20)){
+sign="Taurus";
+emoji="♉";
+element="🌍 Earth";
+color="Green";
+number="6";
+personality="Reliable, patient and practical.";
+}
+
+else if((month=="may" && day>=21)||(month=="june" && day<=20)){
+sign="Gemini";
+emoji="♊";
+element="💨 Air";
+color="Yellow";
+number="5";
+personality="Curious, friendly and intelligent.";
+}
+
+else if((month=="june" && day>=21)||(month=="july" && day<=22)){
+sign="Cancer";
+emoji="♋";
+element="💧 Water";
+color="White";
+number="2";
+personality="Loyal, caring and emotional.";
+}
+
+else if((month=="july" && day>=23)||(month=="august" && day<=22)){
+sign="Leo";
+emoji="♌";
+element="🔥 Fire";
+color="Gold";
+number="1";
+personality="Bold, confident and generous.";
+}
+
+else if((month=="august" && day>=23)||(month=="september" && day<=22)){
+sign="Virgo";
+emoji="♍";
+element="🌍 Earth";
+color="Green";
+number="5";
+personality="Hardworking, kind and intelligent.";
+}
+
+else if((month=="september" && day>=23)||(month=="october" && day<=22)){
+sign="Libra";
+emoji="♎";
+element="💨 Air";
+color="Pink";
+number="6";
+personality="Balanced, charming and peaceful.";
+}
+
+else if((month=="october" && day>=23)||(month=="november" && day<=21)){
+sign="Scorpio";
+emoji="♏";
+element="💧 Water";
+color="Black";
+number="8";
+personality="Passionate, brave and determined.";
+}
+
+else if((month=="november" && day>=22)||(month=="december" && day<=21)){
+sign="Sagittarius";
+emoji="♐";
+element="🔥 Fire";
+color="Purple";
+number="3";
+personality="Optimistic, adventurous and honest.";
+}
+
+else if((month=="december" && day>=22)||(month=="january" && day<=19)){
+sign="Capricorn";
+emoji="♑";
+element="🌍 Earth";
+color="Brown";
+number="8";
+personality="Disciplined, responsible and ambitious.";
+}
+
+else if((month=="january" && day>=20)||(month=="february" && day<=18)){
+sign="Aquarius";
+emoji="♒";
+element="💨 Air";
+color="Blue";
+number="4";
+personality="Creative, independent and unique.";
+}
+
+else if((month=="february" && day>=19)||(month=="march" && day<=20)){
+sign="Pisces";
+emoji="♓";
+element="💧 Water";
+color="Sea Green";
+number="7";
+personality="Kind, artistic and compassionate.";
+}
+
+else{
+
+document.getElementById("result").innerHTML=
+
+"<h2 style='color:red;'>❌ Invalid Month or Day</h2>";
+
+return;
+
+}
+
+document.getElementById("result").innerHTML=
+
+`
+<div class="result-card">
+
+<h1 style="font-size:70px;">
+${emoji}
+</h1>
+
+<h2>${sign}</h2>
+
+<p><b>🔮 Element:</b> ${element}</p>
+
+<p><b>🎨 Lucky Color:</b> ${color}</p>
+
+<p><b>🔢 Lucky Number:</b> ${number}</p>
+
+<p><b>💖 Personality:</b><br>${personality}</p>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshita Gupta | Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:brown;
+color:greenyellow;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#111827;
+position:sticky;
+top:0;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+nav a:hover{
+color:palevioletred;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero span{
+color:darkblue;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:aquamarine;
+color:black;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+section{
+padding:80px 10%;
+}
+
+h2{
+font-size:35px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+margin:15px 0;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:20px;
+text-align:center;
+border-radius:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#1e293b;
+}
+
+table th,table td{
+border:1px solid #334155;
+padding:15px;
+text-align:center;
+}
+
+.project{
+background:#1e293b;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+}
+
+.contact{
+text-align:center;
+line-height:2;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111827;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:35px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Akshita Gupta</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<h1>Hello, I'm <span>Akshita Gupta</span></h1>
+
+<p>BCA Student | Pt. DDUMC</p>
+
+<a href="#projects" class="btn">View Projects</a>
+
+</section>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="card">
+
+<p>
+I am a passionate BCA student at Pt. DDUMC with a strong interest in web development and technology. I enjoy creating responsive websites and continuously learning new skills to improve my knowledge and professional growth.
+</p>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<table>
+
+<tr>
+<th>Qualification</th>
+<th>Institution</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>BCA</td>
+<td>Pt. DDUMC</td>
+<td>Pursuing</td>
+</tr>
+
+</table>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+
+<div class="skill">CSS3</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">Tally Prime</div>
+
+<div class="skill">MS Excel</div>
+
+<div class="skill">MS Word</div>
+
+<div class="skill">PowerPoint</div>
+
+<div class="skill">Communication</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project">
+
+<h3>Student Result Management System</h3>
+
+<p>
+Created using HTML, CSS and JavaScript to calculate marks, percentage, grades and result status automatically.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Responsive Login Form</h3>
+
+<p>
+Designed a responsive login page using HTML and CSS with modern UI principles.
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<div class="contact">
+
+<p><strong>Name:</strong> Akshita Gupta</p>
+
+<p><strong>Email:</strong> akshitag542@gmail.com</p>
+
+<p><strong>Phone:</strong> 9458609816</p>
+
+<p><strong>College:</strong> Pt. DDUMC</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Akshita Gupta | Portfolio Website</p>
+
+</footer>
+
+</body>
+</html>
